@@ -1,26 +1,21 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <header>
+    <h1>Welcome To Daddy</h1>
+  </header>
+  <main>
+    <section class="nav-tabs-container">
+      <router-link :to="{ name: 'curr-joke' }">Today's Joke</router-link>
+      <router-link :to="{ name: 'joke-list' }">My Jokes</router-link>
+    </section>
+    <router-view></router-view>
+  </main>
+  <footer>
+    <h6>Coffeerights © All Right reserved to DAADDDYYYYYY</h6>
+  </footer>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
