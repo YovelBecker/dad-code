@@ -32,3 +32,9 @@ a {
   color: unset;
   text-decoration: none;
 }
+
+.joke-preview-container {
+  border: 1px solid $light-purple;
+  border-radius: 5px;
+  padding:10px 5px;
+}
