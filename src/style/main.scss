@@ -33,6 +33,15 @@ a {
   text-decoration: none;
 }
 
+header {
+  font-size: $font-size-largest;
+  margin-bottom: 6vh;
+}
+
+main {
+  flex: 1;
+}
+
 .joke-preview-container {
   border: 1px solid $light-purple;
   border-radius: 5px;
