@@ -5,13 +5,16 @@
       <h5>{{ joke.setup }}</h5>
       <h4>{{ punchline }}</h4>
     </template>
+    <Loader v-else />
   </section>
 </template>
 
 <script>
 import jokeService from '../services/jokeService';
+import Loader from './Loader.vue';
 
 export default {
+  components: { Loader },
   data() {
     return {
       joke: null,
