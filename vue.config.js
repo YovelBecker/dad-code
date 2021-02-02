@@ -5,17 +5,10 @@ module.exports = {
     : '/',
   pages: {
     index: {
-      // entry for the page
       entry: './src/main.js',
-      // the source template
       template: 'public/index.html',
-      // output as dist/index.html
       filename: 'index.html',
-      // when using title option,
-      // template title tag needs to be <title><%= htmlWebpackPlugin.options.title %></title>
       title: 'Dad Code',
-      // chunks to include on this page, by default includes
-      // extracted common chunks and vendor chunks.
       chunks: ['chunk-vendors', 'chunk-common', 'index']
     },
   },
@@ -26,13 +19,9 @@ module.exports = {
     msTileColor: "#892cdc",
     appleMobileWebAppCapable: 'yes',
     appleMobileWebAppStatusBarStyle: 'black',
-
-    // configure the workbox plugin
     workboxPluginMode: 'InjectManifest',
     workboxOptions: {
-      // swSrc is required in InjectManifest mode.
-      swSrc: 'sw.js',
-      // ...other Workbox options...
+      swSrc: 'src/sw.js',
     },
     iconPaths: {
       favicon32: 'img/icons/favicon-32x32.png',
