@@ -1,7 +1,7 @@
 
 module.exports = {
   publicPath: process.env.NODE_ENV === 'production'
-    ? '/dad-code/'
+    ? 'https://yovelbecker.github.io/dad-code/'
     : '/',
   pwa: {
     name: `Daddy-O'`,
