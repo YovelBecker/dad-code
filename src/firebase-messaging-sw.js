@@ -13,11 +13,27 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig)
 
 const messaging = firebase.messaging();
+messaging.setBackgroundMessageHandler(payload => {
+  console.log(
+    "[firebase-messaging-sw.js] Received background message ",
+    payload
+  )
+  const notificationTitle = "Background Message Title"
+  const notificationOptions = {
+    body: "Background Message body.",
+    icon: "./android-chrome-192x192.png",
+  }
+
+  return self.registration.showNotification(
+    notificationTitle,
+    notificationOptions
+  )
+})
 
 console.log('service worker Registered!')
 
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
-// workbox.precaching.supressWarnings();
+workbox.precaching.supressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
 self.addEventListener('message', msg => {
