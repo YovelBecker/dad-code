@@ -4,7 +4,7 @@ import JokeList from '@/components/JokeList'
 
 const routes = [
   {
-    path: '/',
+    path: '/:id?',
     name: 'curr-joke',
     component: JokeDetails,
   },
