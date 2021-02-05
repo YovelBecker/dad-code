@@ -41,6 +41,7 @@ export default {
     }
   },
   destroyed() {
+  unmounted() {
     this.joke = null;
   }
 }
