@@ -5,8 +5,6 @@ import router from './router';
 import './style/index.scss';
 import './registerServiceWorker'
 
-console.log(process.env.BASE_URL)
-
 createApp(App)
   .use(router)
   .mount('#app')
