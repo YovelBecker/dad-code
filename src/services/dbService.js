@@ -36,6 +36,7 @@ async function setYovelDoc() {
   try {
     await messaging.requestPermission();
     const token = await messaging.getToken();
+    console.log('tokehn', token)
     storageService.save('token', token);
   } catch (error) {
     console.log('no permissions', error);
