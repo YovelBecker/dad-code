@@ -21,7 +21,7 @@ module.exports = {
     appleMobileWebAppStatusBarStyle: 'black',
     workboxPluginMode: 'InjectManifest',
     workboxOptions: {
-      swSrc: 'public/sw.js',
+      swSrc: 'src/sw.js',
     },
     iconPaths: {
       favicon32: 'img/icons/favicon-32x32.png',
