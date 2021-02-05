@@ -35,7 +35,7 @@ async function setYovelDoc() {
   const messaging = firebase.messaging();
   try {
     await messaging.requestPermission();
-    const token = await messaging.getToken();
+    const token = await messaging.getToken({vapidKey:'BEQE7pCH1h1pv8JWa84RZ322EioYlEQXGKeOdQBPgS6GQrx89SRqImvblAtUjXvY3K3TgEcDO5SM7_bqMfwwyNg'})
     console.log('tokehn', token)
     storageService.save('token', token);
   } catch (error) {
