@@ -21,7 +21,7 @@ messaging.setBackgroundMessageHandler(payload => {
   const notificationTitle = "Background Message Title"
   const notificationOptions = {
     body: "Background Message body.",
-    icon: "/firebase-logo.png",
+    icon: "./android-chrome-192x192.png",
   }
 
   return self.registration.showNotification(

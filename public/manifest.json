@@ -29,5 +29,5 @@
   "start_url": "/dad-code/",
   "display": "standalone",
   "background_color": "#000000",
-  "fcm_sender_id": "230175800309"
+  "gcm_sender_id": "230175800309"
 }
