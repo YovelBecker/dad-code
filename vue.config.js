@@ -21,7 +21,7 @@ module.exports = {
     appleMobileWebAppStatusBarStyle: 'black',
     workboxPluginMode: 'InjectManifest',
     workboxOptions: {
-      swSrc: 'src/sw.js',
+      swSrc: 'src/firebase-messaging-sw.js',
     },
     iconPaths: {
       favicon32: 'img/icons/favicon-32x32.png',
