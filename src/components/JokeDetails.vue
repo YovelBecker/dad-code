@@ -12,6 +12,7 @@
 <script>
 import jokeService from '../services/jokeService';
 import Loader from './Loader.vue';
+import dbService from '@/services/dbService';
 
 export default {
   components: { Loader },
@@ -23,6 +24,9 @@ export default {
     }
   },
   async created() {
+    if(this.orderId){
+      dbService.update(this.orderId);
+    }
     this.joke = await jokeService.getRandomJoke();
     this.holdPunchline();
   },
@@ -40,7 +44,11 @@ export default {
       }, this.dotTime)
     }
   },
-  destroyed() {
+  computed:{
+    orderId() {
+      return this.$route.query.id
+    }
+  },
   unmounted() {
     this.joke = null;
   }
